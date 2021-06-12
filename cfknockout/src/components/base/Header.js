@@ -1,7 +1,7 @@
 import React from 'react'
 import './Header.css'
 
-export const Header = () => {
+function Header() {
     return (
         <div className="header">
             <span>CF</span>
@@ -9,3 +9,5 @@ export const Header = () => {
         </div>
     )
 }
+
+export default Header;
