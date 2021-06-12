@@ -1,13 +1,31 @@
 import React from 'react'
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
 import './Page1.css'
-import { Signup } from './Sign';
+import {SignUp} from './components/SignUp';
+import {Login} from './components/Login';
+import {Forget} from './components/Forget';
+import Header from '../base/Header';
 export const Page1 = () => {
     return (
-        <div className="Login">
-            <div className="login-head"><p>Log In</p></div>
-            <div><input type="text" placeholder="Email/Username" required></input></div>        
-            <div><input type="password" placeholder="Password" required></input></div>
-            <div><button>Submit</button></div>
-        </div>
+        <Router>
+            <Header />
+            {/* <Link exact tp="/login">Login</Link> */}
+            <Switch>
+                <Route exact path={["/","/login"]}>
+                    <Login />
+                </Route>
+                <Route exact path = "/signup">
+                    <SignUp/>
+                </Route>
+                <Route exact path = "/forget">
+                    <Forget/>
+                </Route>
+            </Switch>
+        </Router>
     )
 }

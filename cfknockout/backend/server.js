@@ -28,7 +28,7 @@ let cnt = 0;
 app.get("/rooms", (req,res) => {
     const {roomid} = req.query;
     console.log(cnt)
-    cnt ++;
+    cnt++;
     res.json({room: rooms.find(room => room.roomid === roomid)})
 });
 
@@ -60,7 +60,6 @@ io.on("connection", socket => {
         socket.join(roomid);
         if(!joinData.refresh)
             io.in(roomid).emit("updateUsers")
-        // io.to(roomid).emit("updateUsers")
     })
     {/*Socket Leaving */}
     socket.on("leaveRoom", (userid, roomid) => {
