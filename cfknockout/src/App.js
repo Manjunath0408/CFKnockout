@@ -1,4 +1,4 @@
-import { useEffect,useState } from "react";
+// import { useEffect,useState } from "react";
 import { io } from "socket.io-client";
 import { Header } from "./components/base/Header";
 import { Page1 } from "./components/p1/Page1";
@@ -7,7 +7,6 @@ import './styles/App.css'
 // const axios = require("axios")
 // const socket = io("http://localhost:4000");
 import React, { useState, useEffect} from 'react';
-import { page1 } from "./components/p1/page1";
 
 function App() {
   // const [roomData, setRoomData] = useState([]);
@@ -60,8 +59,8 @@ function App() {
   // }
   return (
     <>
-     <div className="head"><Header/></div>
-     <div className="login-comp"><Page1/></div>
+        <Header />
+        <Page1 />  
     </>
   );
 }

@@ -3,9 +3,8 @@ import './Header.css'
 
 export const Header = () => {
     return (
-        <div className="header">
-            <span>CF</span>
-            <span>Knockout</span>
+        <div className="navbar navbar-light bg-light d-flex justify-content-center">
+            <span className="h1">CFKnockout</span>
         </div>
     )
 }
