@@ -1,10 +1,12 @@
 import React from 'react'
-import { Header } from '../base/Header'
+import { Header } from './Header'
+import { Sign } from '../p1/Sign'
+
 export const Signup = () => {
     return (
         <div>
             <Header/>
-            <p>Hii bnroa</p>
+            <Sign/>
         </div>
     )
 }
