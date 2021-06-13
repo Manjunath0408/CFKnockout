@@ -3,10 +3,13 @@ import './Login.css'
 
 import {
     Link
-  } from "react-router-dom";
+} from "react-router-dom";
+
+let roomSize = 3;
+
 export const Login = () => {
     return (
-        <div>
+        <>
             <section className='container-fluid'>
                 <section className="row d-flex justify-content-center align-items-center">
                     <section className='col-12 col-sm-6 col-md-5 form-container '>
@@ -32,6 +35,6 @@ export const Login = () => {
                     </section>
                 </section>
             </section>
-        </div>
+        </>
     )
 }

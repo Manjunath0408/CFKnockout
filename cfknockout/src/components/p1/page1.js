@@ -1,3 +1,7 @@
+/*
+auth
+*/
+
 import React from 'react'
 import {
     BrowserRouter as Router,
@@ -6,7 +10,6 @@ import {
     Link
 } from "react-router-dom";
   
-import './Page1.css'
 import {SignUp} from './components/SignUp';
 import {Login} from './components/Login';
 import {Forget} from './components/Forget';
@@ -15,16 +18,17 @@ import Header from '../base/Header';
 export const Page1 = () => {
     return (
         <Router>
-            <Header />
+            {/* <Header /> */}
             {/* <Link exact tp="/login">Login</Link> */}
             <Switch>
-                <Route exact path={["/","/login"]}>
+                <Route exact path={["/","/auth/login"]}>
                     <Login />
+                    {/* <h1>Hi</h1> */}
                 </Route>
-                <Route exact path = "/signup">
+                <Route exact path = "/auth/signup">
                     <SignUp/>
                 </Route>
-                <Route exact path = "/forget">
+                <Route exact path = "/auth/forget">
                     <Forget/>
                 </Route>
             </Switch>
