@@ -3,6 +3,9 @@ import { io } from "socket.io-client";
 import Header from "./components/base/Header";
 import { Page1 } from "./components/p1/Page1";
 import { Page2 } from "./components/p2/Page2";
+import { Login } from "./components/p1/components/Login";
+import { SignUp } from "./components/p1/components/SignUp";
+import { Forget } from "./components/p1/components/Forget";
 import {
     BrowserRouter as Router,
     Switch,
@@ -68,12 +71,17 @@ function App() {
             <Router>
                 {/* <Header /> */}
                 <Switch>
-                    <Route exact path="/auth" component={ Page1 }/>
-                    {/* <Route exact path="/auth">
+                    <Route exact path="/">
                         <Page1 />
-                    </Route> */}
+                    </Route>
                     <Route exact path="/dashboard">
                         <Page2 />
+                    </Route>
+                    <Route exact path="/auth/signup">
+                        <SignUp />
+                    </Route>
+                    <Route exact path="/auth/forget">
+                        <Forget />
                     </Route>
                 </Switch>
             </Router>
