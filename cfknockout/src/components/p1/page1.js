@@ -20,11 +20,11 @@ export const Page1 = () => {
             <Header />
             {/* <Link exact tp="/login">Login</Link> */}
             <Switch>
-                <Route exact path={["/","/auth/login"]}>
+                <Route exact path={["/","/login"]}>
                     <Login />
                     {/* <h1>Hi</h1> */}
                 </Route>
-                <Route exact path = "/auth/signup">
+                <Route exact path = "/signup">
                     <SignUp/>
                 </Route>
                 <Route exact path = "/forget">

@@ -77,10 +77,10 @@ function App() {
                     <Route exact path="/dashboard">
                         <Page2 />
                     </Route>
-                    <Route exact path="/auth/signup">
+                    <Route exact path="/signup">
                         <SignUp />
                     </Route>
-                    <Route exact path="/auth/forget">
+                    <Route exact path="/forget">
                         <Forget />
                     </Route>
                 </Switch>
